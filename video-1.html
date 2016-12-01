@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <style>
+    .video-player {
+      width: 100%;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+<div id="box">
+</div>
+</body>
+<script>
+  var elBox = document.getElementById('box');
+  var tpl = document.createElement('template');
+  var documentFragment;
+  var strHtml = '<video class="video-player" src="http://gslb.miaopai.com/stream/yNuEQZt5QPVHl8DGwH6w5w__.mp4?yx=&amp;refer=weibo_app&amp;Expires=1480504270&amp;ssig=7fZ5RPPNZY&amp;KID=unistore,video" poster="http://wscdn.miaopai.com/stream/yNuEQZt5QPVHl8DGwH6w5w___tmp_11_724_.jpg" controls playsinline preload="metadata"></video>';
+
+  tpl.innerHTML = strHtml;
+  documentFragment = tpl.content;
+  elBox.appendChild(documentFragment);
+</script>
+</html>
